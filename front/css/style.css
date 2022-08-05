@@ -40,3 +40,10 @@ h2, h3, form {
   margin: 15px;
   font-size: x-large;
 }
+.row {
+  
+  border: black solid ;
+  background-color: blue;
+  color: white;
+ 
+}
