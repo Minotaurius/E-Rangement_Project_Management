@@ -9,22 +9,26 @@
 </head>
 <body>
     <header>
+    <h1>Placeholder App Title</h1>
     <nav>
       {{#if user}}
         <span class="username">{{user.username}}</span>
         <a href="/auth/logout">Log Out</a>
         {{else}}
         <a href="/login">Log In</a>
-        <span>or</span>
         <a href="/register">Register</a>
       {{/if}}
     </nav>
     </header>
-    <h1>Placeholder App Title</h1>
 
     <h2>Welcome {{#if user}}{{user.username}}{{else}}Guest{{/if}}</h2>
 
-    <h3>{{#if project-title}}{{else}}Project{{/if}}</h3>
+    <h3>{{#if project-title}}{{else}}Project Title{{/if}}</h3>
+
+    <form>
+        <input type="text" name="todos" id="todos" placeholder="Add ToDos Here">
+        <button id="todoBtn">Submit</button>
+    </form>
 
 
     <script src="js/app.js"></script>
