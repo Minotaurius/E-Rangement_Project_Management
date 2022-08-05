@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3333;
 const db = require ('./connection/connection');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+require('dotenv').config();
 
 app.use(express.static(path.join('front')));
 app.engine('hbs', engine({ extname: '.hbs'}));
@@ -15,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.get('/', (req, res) => {
-    res.send ("Works")
+    res.render ("index")
 })
 
 db.sync().then(() => {
