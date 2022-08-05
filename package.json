@@ -1,6 +1,7 @@
 {
   "name": "project-2",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,16 +22,5 @@
     "nodemailer": "^6.7.7",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Minotaurius/project-2.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Minotaurius/project-2/issues"
-  },
-  "homepage": "https://github.com/Minotaurius/project-2#readme",
-  "description": ""
+  }
 }
