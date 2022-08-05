@@ -1,3 +1,14 @@
-const view_router = require('express').Router();
+const { Sequelize } = require('sequelize');
 
-modeule.exports = view_router;
+const connection = new Sequelize(
+    'users',
+    'root', //username
+    'Superfoxgarfmode22!', //pw
+    {
+        host: 'localhost',
+        dialect: 'mysql',
+        logging: true
+    }
+);
+
+module.exports = connection;
