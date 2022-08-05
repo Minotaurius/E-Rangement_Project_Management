@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="/project-2/front/style.css">
 </head>
 <body>
+    <header>
+    <nav>
+      {{#if user}}
+        <span class="username">{{user.username}}</span>
+        <a href="/auth/logout">Log Out</a>
+        {{else}}
+        <a href="/login">Log In</a>
+        <span>or</span>
+        <a href="/register">Register</a>
+      {{/if}}
+    </nav>
+    </header>
+    <h1>Placeholder App Title</h1>
+
+    <h2>Welcome {{#if user}}{{user.username}}{{else}}Guest{{/if}}</h2>
+
+    <h3>{{#if project-title}}{{else}}Project{{/if}}</h3>
 
 
     <script src="/project-2/front/app.js"></script>
