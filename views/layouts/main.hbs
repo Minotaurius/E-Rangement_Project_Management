@@ -15,7 +15,7 @@
         <span class="username">{{user.username}}</span>
         <a href="/auth/logout">Log Out</a>
         {{else}}
-        <a href="/login">Log In</a>
+        <a href="/login">Login</a>
         <a href="/register">Register</a>
       {{/if}}
     </nav>
@@ -27,9 +27,8 @@
 
     <form>
         <input type="text" name="todos" id="todos" placeholder="Add ToDos Here">
-        <button id="todoBtn">Submit</button>
+        <button id="submitBtn">Submit</button>
     </form>
-
 
     <script src="js/app.js"></script>
 </body>
