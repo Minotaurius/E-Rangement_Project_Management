@@ -2,6 +2,7 @@
   "name": "project-2",
   "version": "1.0.0",
   "main": "server.js",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -17,19 +18,9 @@
     "handlebars": "^4.7.7",
     "jshint": "^2.13.5",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "nodemailer": "^6.7.7",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Minotaurius/project-2.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Minotaurius/project-2/issues"
-  },
-  "homepage": "https://github.com/Minotaurius/project-2#readme",
-  "description": ""
+  }
 }
