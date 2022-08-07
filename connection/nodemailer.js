@@ -1,11 +1,16 @@
 const nodemailer = require('nodemailer');
 
 let mailTransporter = nodemailer.createTransport({
+    host: "smtp.mail.yahoo.com",
+    port: 465,
+    secure: true,
     service: 'yahoo',
     auth: {
-        user: 'testcoding@yahoo.com',
+        user: 'testcoding@yahoo.com', 
         pass: 'thisisapassword'
-    }
+    },
+    debug: false,
+    logger: true,
 });
 
 let mailDetails = {
