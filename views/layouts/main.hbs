@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Management App</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -25,61 +25,69 @@
       <a href="/register">Register</a>
       {{/if}}
     </nav>
-    
-    </header>
-    <h1>E-Genda? E-Rangement?</h1>
 
-  <h2>Welcome {{#if user}}{{user.username}}{{else}}Guest{{/if}}</h2>
+  </header>
+  <h2>E-Rangement?</h2>
 
-  <h3>{{#if project-title}}{{else}}Project Title{{/if}}</h3>
+  <h3>Welcome {{#if user}}{{user.username}}{{else}}Guest{{/if}}</h3>
+
+  <h4>{{#if project-title}}{{else}}Project Title{{/if}}</h4>
 
   <form>
     <input type="text" name="todos" id="todos" placeholder="Add ToDos Here">
-    <button id="submitBtn">Submit</button>
   </form>
   <section>
-    <div class="container-fluid">
+    <div class="container container-fluid">
       <div class="row">
-        <div class="card" style="width: 18rem;">
+
+        <div class="card border-dark" style="width: 20%;">
           <div class="card-header">
             Person 1
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            person 2
+          <div class="card-body">
+            <div class="list-group list-group-flush" id="todo-1">Person 1 Todos</div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
+          <div class="card-footer">
+            <button id="prsn-1">Add ToDo</button>
+          </div>
         </div>
-        <div class="card" style="width: 18rem;">
+
+        <div class="card border-dark" style="width: 20%;">
+          <div class="card-header">
+            Person 2
+          </div>
+          <div class="card-body">
+            <div class="list-group list-group-flush" id="todo-2">Person 2 Todos</div>
+          </div>
+          <div class="card-footer">
+            <button id="prsn-2">Add ToDo</button>
+          </div>
+        </div>
+
+        <div class="card border-dark" style="width: 20%;">
           <div class="card-header">
             Person 3
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
+          <div class="card-body">
+            <div class="list-group list-group-flush" id="todo-3">Person 3 Todos</div>
+          </div>
+          <div class="card-footer">
+            <button id="prsn-3">Add ToDo</button>
+          </div>
         </div>
-        <div class="card" style="width: 18rem;">
+
+        <div class="card border-dark" style="width: 20%;">
           <div class="card-header">
             Person 4
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
+          <div class="card-body">
+            <div class="list-group list-group-flush" id="todo-4">Person 4 Todos</div>
+          </div>
+          <div class="card-footer">
+            <button id="prsn-4">Add ToDo</button>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
