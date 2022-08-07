@@ -30,7 +30,7 @@ User.init({
     modelName: 'user',
     hooks: {
         async beforeCreate(user) {
-            const secure_pass = await bcrypt.hash(user.password, 15);
+            const secure_pass = await bcrypt.hash(user.password, 10);
             user.password = secure_pass;
         }
     }
