@@ -41,3 +41,18 @@ h2, h3, form {
   margin: 15px;
   font-size: x-large;
 }
+
+.container {
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  margin: 20px;
+  width: 20%;
+}
