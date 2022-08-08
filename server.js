@@ -34,5 +34,3 @@ app.get('/', (req, res) => {
 db.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Listening on Port ${PORT}`));
     });
-
-    //test
