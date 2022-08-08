@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 const connection = new Sequelize(
-    'users',//database name
+    'erangement_data',//database name
     'root', //username
     'chps694530', //pw
     {
