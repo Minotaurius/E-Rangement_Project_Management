@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const connection = new Sequelize(
     'users',//database name
     'root', //username
-    '', //pw
+    'Empyre', //pw
     {
         host: 'localhost',
         dialect: 'mysql',
