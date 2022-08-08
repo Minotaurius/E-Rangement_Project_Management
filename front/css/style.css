@@ -70,3 +70,14 @@ h2, h3, h4, form {
 .card-header, .card-footer {
   text-align: center;
 }
+
+
+
+#genCard {
+  display: flex;
+  margin: 20px;
+  width: 20%;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+}
