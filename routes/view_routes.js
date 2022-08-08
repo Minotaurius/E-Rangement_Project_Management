@@ -1,5 +1,6 @@
 const view_router = require('express').Router();
 const { loggedIn } = require('./loggedin');
+const fs = require('fs')
 const User = require('../models/User');
 
 view_router.get('/', loggedIn, (req, res) => {
