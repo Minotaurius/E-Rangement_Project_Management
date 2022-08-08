@@ -1,5 +1,4 @@
 const auth = require('express').Router();
-const { upsert } = require('../models/User');
 const User = require('../models/User');
 const { loggedIn } = require('./loggedin');
 
