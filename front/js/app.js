@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 //List Items for each person
 const todo1 = document.getElementById('todo-1')
 const todo2 = document.getElementById('todo-2')
@@ -66,6 +68,50 @@ function todoOutput(data) {
       </div>
     `;
 
-    todo4.insertAdjacentHTML('beforeend', html)
+
+// const api_url ="https://zenquotes.io/api/quotes/";
+
+// ('#genBtn').onclick = function() {
+//   const response = await fetch(url);
+//   var data = await response.json();
+//   console.log(data);
+
+// }
+// getapi(api_url);
+// async function getapi(url)
+// {
+//   const response = await fetch(url);
+//   var data = await response.json();
+//   console.log(data);
+// }
+// $('#genBtn').click(function(event) {
+//   event.preventDefault();
+//   setQuote
+// })
+// getapi(api_url);
+
+  //   todo4.insertAdjacentHTML('beforeend', html)
+//   })
+// }
+
+('#genBtn').onclick = function() {
+fetch('https://zenquotes.io/api/quotes/')
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    }else {
+      throw new Error('NOT WORKING!!')
+    }
+  }).then(data => {
+    console.log(data);
+    displayQuote(data)
   })
+  .catch((error) => console.error("FETCH ERROR:", error));
+}
+});
+};
+
+function displayQuote(data) {
+  const quoteDiv = document.getElementById('quotePlacement');
+  quoteDiv.appendChild('quotePlacement');
 }
