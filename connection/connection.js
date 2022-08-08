@@ -1,9 +1,9 @@
 const { Sequelize } = require('sequelize');
 
 const connection = new Sequelize(
-    'users',//database name
+    'erangement_data',//database name
     'root', //username
-    'Empyre', //pw
+    'Superfoxgarfmode22!', //pw
     {
         host: 'localhost',
         dialect: 'mysql',
