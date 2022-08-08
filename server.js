@@ -5,10 +5,13 @@ const PORT = process.env.PORT || 3333;
 const db = require ('./connection/connection');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const Sequelize = require('sequelize');
+
 require('dotenv').config();
-// const { view_routes, auth } = require('./routes/index')
+
+// const { view_routes, authorization } = require('./routes')
 const app = express();
+
+
 app.use(express.static(path.join('front')));
 app.engine('hbs', engine({ extname: '.hbs'}));
 app.set('view engine', 'hbs');
@@ -26,7 +29,7 @@ app.use(session({
 }));
 
 // app.use('/', view_routes);
-// app.use('/authorization', auth);
+// app.use('/auth', authorization);
 
 app.get('/', (req, res) => {
     res.render ("index")

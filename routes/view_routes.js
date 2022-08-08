@@ -5,7 +5,7 @@ const User = require('../models/User');
 view_router.get('/', loggedIn, (req, res) => {
     const user_id = req.session.user_id;
 
-    if(user_id) {
+    if (user_id) {
         return User.findOne({
             where: {
                 id: user_id
