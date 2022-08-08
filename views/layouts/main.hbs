@@ -33,8 +33,8 @@
 
   <h4>{{#if project-title}}{{else}}Project Title{{/if}}</h4>
 
-  <form>
-    <input type="text" name="todos" id="todos" placeholder="Add ToDos Here">
+  <form action="/api/todos" method="post">
+    <input type="text" name="input" placeholder="Add ToDos Here">
   </form>
   <section>
     <div class="container container-fluid">
@@ -107,7 +107,7 @@
       </div>
     </div>
   </section>
-  
+
   <script src="js/app.js"></script>
 </body>
 

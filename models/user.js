@@ -26,7 +26,7 @@ User.init({
         }
     }
 }, {
-    sequelize: require('sequelize'),
+    sequelize: require('../connection/connection'),
     modelName: 'user',
     hooks: {
         async beforeCreate(user) {
