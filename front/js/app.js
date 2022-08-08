@@ -15,7 +15,7 @@ const btn4 = document.getElementById('prsn-4');
 function todoOutput(data) {
   todo1.innerHTML, todo2.innerHTML, todo3.innerHTML, todo4.innerHTML = '';
 
-  if(!data.length) {
+  if (!data.length) {
     todo1.innerHTML, todo2.innerHTML, todo3.innerHTML, todo4.innerHTML = '<p>No ToDos have been added yet!</p>';
   }
 
@@ -106,6 +106,7 @@ fetch('https://zenquotes.io/api/quotes/')
     console.log(data);
     displayQuote(data)
   })
+<<<<<<< HEAD
   .catch((error) => console.error("FETCH ERROR:", error));
 }
 });
@@ -115,3 +116,83 @@ function displayQuote(data) {
   const quoteDiv = document.getElementById('quotePlacement');
   quoteDiv.appendChild('quotePlacement');
 }
+=======
+}
+
+function getTodos() {
+  fetch('/view/todos')
+    .then(res => res.json())
+    .then(todos => {
+      outputToDos(todos);
+    });
+}
+
+function addTodo(event) {
+  const input = document.querySelector('input[name="todos"]');
+  const value = input.value;
+  const data = {
+    text: value
+  };
+
+  event.preventDefault();
+
+  fetch('/view/todos', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then(server_res => server_res.json())
+    .then(todos => {
+      input.value = '';
+      outputToDos(todos);
+    });
+}
+
+function deleteTodo(event) {
+  const el = event.target;
+
+  if (el.tagName === 'BUTTON') {
+    const id = el.dataset.id;
+    const data = {
+      id: parseInt(id)
+    };
+
+    fetch('/view/todos', {
+      method: 'delete',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => res.json())
+      .then(todos => outputToDos(todos));
+  }
+}
+
+function deleteTodo(event) {
+  const el = event.target;
+
+  if (el.tagName === 'BUTTON') {
+    const id = el.dataset.id;
+    const data = {
+      id: parseInt(id)
+    };
+
+    fetch('/view/todos', {
+      method: 'delete',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => res.json())
+      .then(todos => outputToDos(todos));
+  }
+}
+
+getTodos();
+btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
+todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
+>>>>>>> 01a561ec85e3f9d2eba6cd919cc275760d4be019

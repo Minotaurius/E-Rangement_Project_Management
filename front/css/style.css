@@ -65,6 +65,7 @@ h2, h3, h4, form {
 
 .card button {
   margin: 5px;
+  padding: 5px;
 }
 
 .card-header, .card-footer {
