@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
     res.render ("index")
 })
 
-db.sync({ force: true }).then(() => {
+db.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Listening on Port ${PORT}`));
     });
 
