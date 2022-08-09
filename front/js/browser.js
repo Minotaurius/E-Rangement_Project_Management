@@ -147,6 +147,37 @@
 // btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
 // todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
 
+<<<<<<< HEAD:front/js/browser.js
+// var myModal = document.getElementById('modalBtn')
+// var myInput = document.getElementById('myInput')
+
+// myModal.addEventListener('shown.bs.modal', function () {
+//   myInput.focus()
+// });
+
+function getVal() {
+  const val = document.querySelector('input')
+}
+
+function makeGetRequest(path) {
+  axios.get('http://api.quotable.io/random').then(
+      (response) => {
+          var result = response.data;
+          // let i = Math.floor(Math.random() * result.length);
+          // console.log(result[i]);
+          console.log(result);
+      },
+      (error) => {
+          console.log(error);
+      }
+  );
+}
+const motivate = document.getElementById('genBtn')
+
+motivate.addEventListener('click', makeGetRequest);
+
+// .then(html => {document.getElementById('data').append(html)});
+=======
 
 var savebtn = document.querySelector('.save-btn')
 var title = document.getElementById('project-title')
@@ -179,3 +210,4 @@ btn.addEventListener('click', function changeText() {
 // function getVal() {
 //   const val = document.querySelector('input')
 // }
+>>>>>>> 42f9962d4e5a9c17cb80dc941c99708d8563917e:front/js/app.js
