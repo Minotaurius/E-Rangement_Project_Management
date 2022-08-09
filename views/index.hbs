@@ -52,7 +52,7 @@
 </form> --}}
 
 <form action="/api/todos" method="post">
-  <input type="text" name="tasks" placeholder="Add ToDos Here" value="">
+  <input type="text" id="tasks" placeholder="Add ToDos Here">
 </form>
 <section>
   <div class="container container-fluid">
@@ -66,7 +66,7 @@
           <div class="list-group list-group-flush"></div>
         </div>
         <div class="card-footer">
-          <button id="prsn-1">Add ToDo</button>
+          <button id="todo-btn" class="input-btn">Add ToDo</button>
         </div>
       </div>
       {{/each}}
