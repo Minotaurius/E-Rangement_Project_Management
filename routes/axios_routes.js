@@ -1,4 +1,4 @@
-const axios = require('axios').Router();
+const axios = require('axios');
 
 // const quoteEl = document.getElementById('placement');
 

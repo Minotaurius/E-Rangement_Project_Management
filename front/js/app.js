@@ -1,5 +1,3 @@
-// const { response } = require("express");
-import axios from 'axios';
 
 //List Items for each person
 const todo1 = document.getElementById('todo-1')
@@ -8,9 +6,9 @@ const todo3 = document.getElementById('todo-3')
 const todo4 = document.getElementById('todo-4')
 //Add Todo buttons for each person
 const btn1 = document.getElementById('prsn-1');
-const btn2 = document.getElementById('prsn-2');
-const btn3 = document.getElementById('prsn-3');
-const btn4 = document.getElementById('prsn-4');
+// const btn2 = document.getElementById('prsn-2');
+// const btn3 = document.getElementById('prsn-3');
+// const btn4 = document.getElementById('prsn-4');
 function todoOutput(data) {
   todo1.innerHTML, todo2.innerHTML, todo3.innerHTML, todo4.innerHTML = '';
   if (!data.length) {
@@ -125,8 +123,8 @@ function deleteTodo(event) {
   }
 }
 getTodos();
-btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
-todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
+[btn1].forEach(btn => btn.addEventListener('click', addTodo));
+[todo1, todo2, todo3, todo4].forEach(todo => todo.addEventListener('click', addTodo));
 
 
 

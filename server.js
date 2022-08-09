@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-makeGetRequest();
+
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
