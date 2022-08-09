@@ -164,7 +164,6 @@ function makeGetRequest(path) {
           var result = response.data;
           // let i = Math.floor(Math.random() * result.length);
           // console.log(result[i]);
-          
           console.log(result);
       },
       (error) => {
@@ -176,4 +175,4 @@ const motivate = document.getElementById('genBtn')
 
 motivate.addEventListener('click', makeGetRequest);
 
-// .then(html => {document.getElementById('data').append(html)})
+// .then(html => {document.getElementById('data').append(html)});
