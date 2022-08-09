@@ -147,13 +147,32 @@
 // btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
 // todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
 
-var myModal = document.getElementById('modalBtn')
-var myInput = document.getElementById('myInput')
+// var myModal = document.getElementById('modalBtn')
+// var myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-});
+// myModal.addEventListener('shown.bs.modal', function () {
+//   myInput.focus()
+// });
 
 function getVal() {
   const val = document.querySelector('input')
 }
+
+function makeGetRequest(path) {
+  axios.get('http://api.quotable.io/random').then(
+      (response) => {
+          var result = response.data;
+          // let i = Math.floor(Math.random() * result.length);
+          // console.log(result[i]);
+          console.log(result);
+      },
+      (error) => {
+          console.log(error);
+      }
+  );
+}
+const motivate = document.getElementById('genBtn')
+
+motivate.addEventListener('click', makeGetRequest);
+
+// .then(html => {document.getElementById('data').append(html)});
