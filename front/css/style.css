@@ -5,15 +5,15 @@
 }
 
 body {
-  background: silver;
+  background: #346b31;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: black;
-  box-shadow: 3px 3px 15px 3px rgb(33, 93, 182) inset;
+  background: rgb(161, 116, 33);
+  box-shadow: 3px 3px 15px 3px rgb(0, 0, 0) inset;
   color: white;
   padding: 8px 2%;
 }
@@ -38,10 +38,27 @@ nav a:hover::after {
 
 .modalBtn {
   display: block;
+  background: rgb(161, 116, 33);
+  border-color: black;
+  border-width: 2px;
 }
 
 form input {
   text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background: rgb(161, 116, 33);
+  color: whitesmoke;
+}
+
+form input::placeholder {
+  color: whitesmoke;
+  opacity: 40%;
+}
+
+h2, h3 {
+  color: whitesmoke;
 }
 
 h2, h3, h4, form {
@@ -82,7 +99,27 @@ h2, h3, h4, form {
   display: flex;
   margin: 20px;
   width: 20%;
-  border-style: solid;
-  border-width: 3px;
   text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background: rgb(161, 116, 33);
+  color: whitesmoke;
+}
+
+.card-body {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+#placement {
+  color: whitesmoke;
+  opacity: 40%;
+}
+
+#genBtn {
+  background: whitesmoke;
+  opacity: 75%;
 }

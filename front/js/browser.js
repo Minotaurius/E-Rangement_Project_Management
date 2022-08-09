@@ -31,18 +31,6 @@ savebtn.addEventListener('click', function changeText() {
   title.innerText = input;
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
 // *****FUNCTION TO SET TODOS IN PROPER PERSON CARD***********
 
 var inputBtn = document.querySelector('.input-btn')
