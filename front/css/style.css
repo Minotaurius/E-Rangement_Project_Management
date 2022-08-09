@@ -36,6 +36,10 @@ nav a:hover::after {
   background: white;
 }
 
+.modalBtn {
+  display: block;
+}
+
 form input {
   text-align: center;
 }

@@ -25,7 +25,7 @@ app.use(session({
 }));
 
 app.use('/', view_routes);
-app.use('/authorization', auth);
+app.use('/auth', auth);
 
 app.get('/', (req, res) => {
     res.render ("index")
