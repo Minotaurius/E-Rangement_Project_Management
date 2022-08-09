@@ -50,7 +50,7 @@
 </form> --}}
 
 <form action="/api/todos" method="post">
-  <input type="text" name="input" placeholder="Add ToDos Here">
+  <input type="text" name="tasks" placeholder="Add ToDos Here" value="">
 </form>
 <section>
   <div class="container container-fluid">
@@ -58,7 +58,7 @@
       {{#each user}}
       <div class="card border-dark" style="width: 18rem;">
         <div class="card-header">
-          {{user.username}}
+          {{this.username}}
         </div>
         <div class="card-body">
           <div class="list-group list-group-flush"></div>
