@@ -147,6 +147,7 @@
 // btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
 // todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
 
+
 var savebtn = document.querySelector('.save-btn')
 var title = document.getElementById('project-title')
 
@@ -157,6 +158,24 @@ savebtn.addEventListener('click', function changeText() {
 })
 
 
-function getVal() {
-  const val = document.querySelector('input')
-}
+
+var projTitle = document.getElementById('project-title');
+var btn = document.querySelector('.save-btn');
+
+
+
+btn.addEventListener('click', function changeText() {
+  var userInput = document.getElementById('project-input').value;
+  projTitle.innerText = userInput;
+  //add function to hide modal
+})
+
+// function changeText() {
+//   var title = document.getElementById('project-input').value
+//   document.getElementById('project-title').changeText = title.value
+//  }
+
+
+// function getVal() {
+//   const val = document.querySelector('input')
+// }
