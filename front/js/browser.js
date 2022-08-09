@@ -31,6 +31,33 @@ savebtn.addEventListener('click', function changeText() {
   title.innerText = input;
 })
 
-// function getVal() {
-//   const val = document.querySelector('input')
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+// *****FUNCTION TO SET TODOS IN PROPER PERSON CARD***********
+
+var inputBtn = document.querySelector('.input-btn')
+var toDos = document.querySelector('.list-group')
+
+
+document.addEventListener('click', (event) => {
+  var userInput = document.getElementById('tasks').value;
+  if (event.target.id === 'todo-btn') {
+    var html = `<div>${userInput}</div>`
+    event.target.insertAdjacentHTML("beforeBegin", html)
+    // console.log(event.target)
+  }
+});
+
+// attach to a sibling element - related to event.target
+// for loop?
+// save for local storage
