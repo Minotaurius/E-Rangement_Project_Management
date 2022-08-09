@@ -8,7 +8,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 const { view_routes, auth } = require('./routes/index')
 const app = express();
-// const quoteFunction = require('axios_routes');
 app.use(express.static(path.join('front')));
 app.engine('hbs', engine({ extname: '.hbs'}));
 app.set('view engine', 'hbs');
