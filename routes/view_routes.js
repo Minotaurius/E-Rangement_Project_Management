@@ -8,20 +8,22 @@ view_router.get('/', loggedIn, (req, res) => {
     const user_id = req.session.user_id;
 
     if (user_id) {
-        return User.findOne({
-            where: {
-                id: user_id
-            },
+        return User.findAll({
 
             attributes: ['id', 'email', 'username']
         })
-        .then(user => {
-            user = {
-                username: user.username,
-                email: user.email
-            };
-
-            res.render('index', { user });
+        .then(users => {
+            // user = {
+            //     username: user.username,
+            //     email: user.email
+            // };
+            users = users.map(user => {
+                return {
+                    id: user.id,
+                    username: user.username,
+                }
+            })
+            res.render('index', { users });
         });
     }
 
@@ -33,7 +35,7 @@ view_router.get('/login', loggedIn, (req, res) => {
 });
 
 view_router.get('/register', loggedIn, (req, res) => {
-    res.render('/register', { errors: req.session.errors });
+    res.render('register', { errors: req.session.errors });
 });
 
 module.exports = view_router;
