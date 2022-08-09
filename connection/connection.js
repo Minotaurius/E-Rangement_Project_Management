@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const connection = new Sequelize(
     'erangement_data',//database name
     'root', //username
-    'Superfoxgarfmode22!', //pw
+    'Empyre', //pw
     {
         host: 'localhost',
         dialect: 'mysql',

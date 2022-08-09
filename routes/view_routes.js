@@ -32,7 +32,7 @@ view_router.get('/login', loggedIn, (req, res) => {
 });
 
 view_router.get('/register', loggedIn, (req, res) => {
-    res.render('/register', { errors: req.session.errors });
+    res.render('register', { errors: req.session.errors });
 });
 
 module.exports = view_router;
