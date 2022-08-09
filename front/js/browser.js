@@ -1,25 +1,26 @@
+// const res = require("express/lib/response");
+
 function getVal() {
   const val = document.querySelector('input')
 }
-
+//getting and displaying api
 function makeGetRequest(path) {
   axios.get('http://api.quotable.io/random').then(
       (response) => {
-          var result = response.data;
-          // let i = Math.floor(Math.random() * result.length);
-          // console.log(result[i]);
+          var author = response.data.author;
+          var result = response.data.content;
           console.log(result);
+          document.getElementById('placement').innerHTML = '"' + result + '"' + " " + '-' + author;
       },
       (error) => {
           console.log(error);
       }
   );
 }
-const motivate = document.getElementById('genBtn')
-
+const motivate = document.getElementById('genBtn');
 motivate.addEventListener('click', makeGetRequest);
 
-// .then(html => {document.getElementById('data').append(html)});
+
 
 var savebtn = document.querySelector('.save-btn')
 var title = document.getElementById('project-title')
