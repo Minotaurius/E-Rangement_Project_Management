@@ -1,5 +1,5 @@
-const { response } = require("express");
-const{default: axios} = require('axios');
+// const { response } = require("express");
+import axios from 'axios';
 
 //List Items for each person
 const todo1 = document.getElementById('todo-1')
@@ -183,16 +183,3 @@ todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
   // axios.get("https://zenquotes.io/api/quotes/")
   // .then((data) => console.log(res))
   // .catch((err) => console.log(err))
-
-  function makeGetRequest(path) {
-    axios.get("https://zenquotes.io/api/quotes/").then(
-        (response) => {
-            var result = response.data;
-            console.log(result);
-        },
-        (error) => {
-            console.log(error);
-        }
-    );
-}
-makeGetRequest();
