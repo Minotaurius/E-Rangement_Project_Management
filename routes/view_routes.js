@@ -2,7 +2,6 @@ const view_router = require('express').Router();
 const { loggedIn } = require('./loggedin');
 const fs = require('fs')
 const User = require('../models/User');
-const axiosRoutes = require('./axios_routes');
 
 view_router.get('/', loggedIn, (req, res) => {
     const user_id = req.session.user_id;
