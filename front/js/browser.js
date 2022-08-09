@@ -147,7 +147,6 @@
 // btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
 // todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
 
-<<<<<<< HEAD:front/js/browser.js
 // var myModal = document.getElementById('modalBtn')
 // var myInput = document.getElementById('myInput')
 
@@ -165,6 +164,7 @@ function makeGetRequest(path) {
           var result = response.data;
           // let i = Math.floor(Math.random() * result.length);
           // console.log(result[i]);
+          
           console.log(result);
       },
       (error) => {
@@ -176,38 +176,4 @@ const motivate = document.getElementById('genBtn')
 
 motivate.addEventListener('click', makeGetRequest);
 
-// .then(html => {document.getElementById('data').append(html)});
-=======
-
-var savebtn = document.querySelector('.save-btn')
-var title = document.getElementById('project-title')
-
-savebtn.addEventListener('click', function changeText() {
-  var input = document.getElementById('project-input').value;
-
-  title.innerText = input;
-})
-
-
-
-var projTitle = document.getElementById('project-title');
-var btn = document.querySelector('.save-btn');
-
-
-
-btn.addEventListener('click', function changeText() {
-  var userInput = document.getElementById('project-input').value;
-  projTitle.innerText = userInput;
-  //add function to hide modal
-})
-
-// function changeText() {
-//   var title = document.getElementById('project-input').value
-//   document.getElementById('project-title').changeText = title.value
-//  }
-
-
-// function getVal() {
-//   const val = document.querySelector('input')
-// }
->>>>>>> 42f9962d4e5a9c17cb80dc941c99708d8563917e:front/js/app.js
+// .then(html => {document.getElementById('data').append(html)})

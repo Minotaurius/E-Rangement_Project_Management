@@ -9,7 +9,6 @@ require('dotenv').config();
 const { view_routes, auth } = require('./routes/index')
 const app = express();
 // const quoteFunction = require('axios_routes');
-const makeGetRequest = require('./routes/axios_routes');
 app.use(express.static(path.join('front')));
 app.engine('hbs', engine({ extname: '.hbs'}));
 app.set('view engine', 'hbs');
