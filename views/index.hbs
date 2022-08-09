@@ -1,8 +1,8 @@
 <header>
   <h1>E-Rangement</h1>
   <nav>
-    {{#if user}}
-    <span class="username">{{user.username}}</span>
+    {{#if users}}
+    <span class="username">{{users.username}}</span>
     <a href="/auth/logout">Log Out</a>
     {{else}}
     <a href="/login">Login</a>
@@ -11,9 +11,9 @@
   </nav>
 
 </header>
-<h3>Welcome {{#if user}}{{user.username}}{{else}}Guest{{/if}}</h3>
+<h3>Welcome {{#if users}}{{users.username}}{{else}}Guest{{/if}}</h3>
 
-<h2 id="project-title">placeholder</h2>
+<h2 id="project-title"></h2>
 
 
 {{!-- <h4>{{#if project-title}}{{else}}Project Title{{/if}}</h4> --}}
@@ -37,8 +37,10 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary save-btn">Save Project</button>
+
       </div>
     </div>
   </div>
@@ -50,61 +52,24 @@
 </form> --}}
 
 <form action="/api/todos" method="post">
-  <input type="text" name="tasks" placeholder="Add ToDos Here" value="test">
+  <input type="text" name="tasks" placeholder="Add ToDos Here" value="">
 </form>
 <section>
   <div class="container container-fluid">
     <div class="row">
       {{#each users}}
-      <div class="card border-dark" style="width: 20%;">
+      <div class="card border-dark" style="width: 18rem;">
         <div class="card-header">
           {{this.username}}
         </div>
         <div class="card-body">
-          <div class="list-group list-group-flush" id="todo-1"></div>
+          <div class="list-group list-group-flush"></div>
         </div>
         <div class="card-footer">
           <button id="prsn-1">Add ToDo</button>
         </div>
       </div>
       {{/each}}
-      {{!--
-      <div class="card border-dark" style="width: 20%;">
-        <div class="card-header">
-          Person 2
-        </div>
-        <div class="card-body">
-          <div class="list-group list-group-flush" id="todo-2">Person 2 Todos</div>
-        </div>
-        <div class="card-footer">
-          <button id="prsn-2">Add ToDo</button>
-        </div>
-      </div>
-
-      <div class="card border-dark" style="width: 20%;">
-        <div class="card-header">
-          Person 3
-        </div>
-        <div class="card-body">
-          <div class="list-group list-group-flush" id="todo-3">Person 3 Todos</div>
-        </div>
-        <div class="card-footer">
-          <button id="prsn-3">Add ToDo</button>
-        </div>
-      </div>
-
-      <div class="card border-dark" style="width: 20%;">
-        <div class="card-header">
-          Person 4
-        </div>
-        <div class="card-body">
-          <div class="list-group list-group-flush" id="todo-4">Person 4 Todos</div>
-        </div>
-        <div class="card-footer">
-          <button id="prsn-4">Add ToDo</button>
-        </div>
-      </div> --}}
-
     </div>
   </div>
 </section>
