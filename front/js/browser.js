@@ -1,7 +1,3 @@
-function getVal() {
-  const val = document.querySelector('input')
-}
-
 function makeGetRequest(path) {
   axios.get('http://api.quotable.io/random').then(
       (response) => {
@@ -28,8 +24,7 @@ savebtn.addEventListener('click', function changeText() {
   var input = document.getElementById('project-input').value;
 
   title.innerText = input;
-})
-
+});
 // function getVal() {
 //   const val = document.querySelector('input')
 // }
