@@ -147,12 +147,16 @@
 // btn1, btn2, btn3, btn4.addEventListener('click', addTodo);
 // todo1, todo2, todo3, todo4.addEventListener('click', deleteTodo);
 
-// var myModal = document.getElementById('modalBtn')
-// var myInput = document.getElementById('myInput')
 
-// myModal.addEventListener('shown.bs.modal', function () {
-//   myInput.focus()
-// });
+var savebtn = document.querySelector('.save-btn')
+var title = document.getElementById('project-title')
+
+savebtn.addEventListener('click', function changeText() {
+  var input = document.getElementById('project-input').value;
+
+  title.innerText = input;
+})
+
 
 
 var projTitle = document.getElementById('project-title');
