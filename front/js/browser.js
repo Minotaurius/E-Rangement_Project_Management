@@ -1,5 +1,3 @@
-// const res = require("express/lib/response");
-
 function getVal() {
   const val = document.querySelector('input')
 }
