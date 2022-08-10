@@ -30,7 +30,7 @@ This application was developed by the following users. Please checkout some of t
 ![Screenshot](./front/assets/demo/screenshot.png)
 
 ## Deployed link to application
-Click [HERE](// link to heroku //) to begin your own Project Management via E-Rangement!
+Click [HERE](https://erangement-project-management.herokuapp.com/) to begin your own Project Management via E-Rangement (Hosted by Heroku!)
 
 ## Link to Repository storing our code
 * https://github.com/Minotaurius/E-Rangement_Project_Management
