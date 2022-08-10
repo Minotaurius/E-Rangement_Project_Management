@@ -89,8 +89,10 @@ h2, h3, h4, form {
   padding: 5px;
 }
 
-.card-header, .card-footer {
+.card, .card-header, .card-body {
   text-align: center;
+  background: rgb(161, 116, 33);
+  color: whitesmoke;
 }
 
 
@@ -107,19 +109,10 @@ h2, h3, h4, form {
   color: whitesmoke;
 }
 
-.card-body {
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-width: 3px;
-  border-color: black;
-}
-
 #placement {
   color: whitesmoke;
-  opacity: 40%;
 }
 
 #genBtn {
   background: whitesmoke;
-  opacity: 75%;
 }
