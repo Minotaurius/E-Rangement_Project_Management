@@ -89,11 +89,8 @@ h2, h3, h4, form {
   padding: 5px;
 }
 
-<<<<<<< HEAD
-.card-header, .card-body {
-=======
+
 .card, .card-header, .card-body {
->>>>>>> 7c61e2190cac97adfabb06e69f539ea516527260
   text-align: center;
   background: rgb(161, 116, 33);
   color: whitesmoke;
