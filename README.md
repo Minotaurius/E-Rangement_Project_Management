@@ -24,7 +24,7 @@ This application was developed by the following users. Please checkout some of t
 * Brandon Langer - https://github.com/Minotaurius
 
 ## Demo of application
-![Demo](https://www.youtube.com/watch?v=4Z8m-eynOVM)
+(https://www.youtube.com/watch?v=4Z8m-eynOVM)
 
 ## Screenshot showing application
 ![Screenshot](./front/assets/demo/screenshot.png)
