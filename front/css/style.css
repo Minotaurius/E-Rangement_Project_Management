@@ -89,7 +89,7 @@ h2, h3, h4, form {
   padding: 5px;
 }
 
-.card-header, .card-footer {
+.card-header, .card-body {
   text-align: center;
 }
 
@@ -105,13 +105,6 @@ h2, h3, h4, form {
   border-width: 3px;
   background: rgb(161, 116, 33);
   color: whitesmoke;
-}
-
-.card-body {
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-width: 3px;
-  border-color: black;
 }
 
 #placement {
