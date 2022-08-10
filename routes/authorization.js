@@ -1,5 +1,5 @@
 const auth = require('express').Router();
-const User = require('../models/User');
+const User = require('../models/user');
 const { loggedIn } = require('./loggedin');
 
 auth.post('/register', loggedIn, (req, res) => {
